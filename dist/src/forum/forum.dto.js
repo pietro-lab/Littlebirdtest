@@ -9,11 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HandleLeaveForumDto = exports.HandleJoinForumDto = exports.QueryPageDto = exports.RemoveLikeDto = exports.CreateLikeDto = exports.CreateCommentBodyDto = exports.CreateCommentParamDto = exports.GetForumAndCommentDto = exports.GetForumByThemeDto = exports.RemoveCommentDto = void 0;
 const class_validator_1 = require("class-validator");
 class RemoveCommentDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], RemoveCommentDto.prototype, "comment_id", void 0);
 exports.RemoveCommentDto = RemoveCommentDto;
@@ -21,7 +23,8 @@ exports.RemoveCommentDto = RemoveCommentDto;
 class GetForumByThemeDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], GetForumByThemeDto.prototype, "theme_id", void 0);
 exports.GetForumByThemeDto = GetForumByThemeDto;
@@ -29,7 +32,8 @@ exports.GetForumByThemeDto = GetForumByThemeDto;
 class GetForumAndCommentDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], GetForumAndCommentDto.prototype, "forum_id", void 0);
 exports.GetForumAndCommentDto = GetForumAndCommentDto;
@@ -37,7 +41,8 @@ exports.GetForumAndCommentDto = GetForumAndCommentDto;
 class CreateCommentParamDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], CreateCommentParamDto.prototype, "forum_id", void 0);
 exports.CreateCommentParamDto = CreateCommentParamDto;
@@ -45,7 +50,8 @@ exports.CreateCommentParamDto = CreateCommentParamDto;
 class CreateCommentBodyDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
 ], CreateCommentBodyDto.prototype, "comment_content", void 0);
 exports.CreateCommentBodyDto = CreateCommentBodyDto;
@@ -53,7 +59,8 @@ exports.CreateCommentBodyDto = CreateCommentBodyDto;
 class CreateLikeDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], CreateLikeDto.prototype, "forum_id", void 0);
 exports.CreateLikeDto = CreateLikeDto;
@@ -61,7 +68,8 @@ exports.CreateLikeDto = CreateLikeDto;
 class RemoveLikeDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], RemoveLikeDto.prototype, "forum_id", void 0);
 exports.RemoveLikeDto = RemoveLikeDto;
@@ -69,7 +77,8 @@ exports.RemoveLikeDto = RemoveLikeDto;
 class QueryPageDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], QueryPageDto.prototype, "page", void 0);
 exports.QueryPageDto = QueryPageDto;

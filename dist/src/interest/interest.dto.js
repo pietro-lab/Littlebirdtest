@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryPageDto = exports.DeleteInterestDto = exports.CreateInterestDto = void 0;
 const class_validator_1 = require("class-validator");
 class CreateInterestDto {
 }
@@ -29,7 +30,8 @@ exports.DeleteInterestDto = DeleteInterestDto;
 class QueryPageDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], QueryPageDto.prototype, "page", void 0);
 exports.QueryPageDto = QueryPageDto;

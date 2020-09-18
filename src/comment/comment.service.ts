@@ -5,7 +5,7 @@ import { Response } from 'express';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Comment } from './entity/comment.entity';
 import { Forum } from '../forum/entity/forum.entity';
-import { CommentGateway } from './comment.gateway';
+// import { CommentGateway } from './comment.gateway';
 
 @Injectable()
 export class CommentService {
@@ -14,7 +14,7 @@ export class CommentService {
     @InjectRepository(Comment) private readonly commentRepository: Repository<Comment>,
     @InjectRepository(Reply) private readonly replyRepository: Repository<Reply>,
     @InjectRepository(Forum) private readonly forumRepository: Repository<Forum>,
-    private readonly commentGateway: CommentGateway
+    // private readonly commentGateway: CommentGateway
   ) {};
 
   async getReplies(response: Response, comment_id: number, page: number): Promise<Response> {
@@ -104,13 +104,13 @@ export class CommentService {
         reply_content
       }).execute();
 
-    this.commentGateway.handleNewMessage({
-      comment_id,
-      reply_id: reply.identifiers[0].reply_id,
-      reply_content,
-      user_id,
-      forum
-    });
+    // this.commentGateway.handleNewMessage({
+    //   comment_id,
+    //   reply_id: reply.identifiers[0].reply_id,
+    //   reply_content,
+    //   user_id,
+    //   forum
+    // });
   };
 
   async removeReply(response: Response, reply_id: number): Promise<Response | void> {

@@ -7,13 +7,13 @@ import { Forum } from './entity/forum.entity';
 import { ThemeForum } from './entity/theme-forum.entity';
 import { LikeForum } from './entity/like-forum.entity';
 import { CommentModule } from '../comment/comment.module';
-import { ForumGateway } from './forum.gateway';
+// import { ForumGateway } from './forum.gateway';
 import { UserModule } from '../user/user.module';
 
 @Module({
   imports: [TypeOrmModule.forFeature([ ForumImg, Forum, ThemeForum, LikeForum ]), forwardRef(() => CommentModule), UserModule],
   controllers: [ForumController],
-  providers: [ForumService, ForumGateway],
-  exports: [TypeOrmModule, ForumGateway]
+  providers: [ForumService],
+  exports: [TypeOrmModule]
 })
 export class ForumModule {}

@@ -9,11 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HandleLeaveCommentDto = exports.HandleJoinCommentDto = exports.CreateReplyQueryDto = exports.QueryPageDto = exports.GetCommentsByForumDto = exports.RemoveLikeDto = exports.RemoveReplyDto = exports.CreateReplyBodyDto = exports.CreateReplyParamDto = exports.CreateLikeDto = exports.GetRepliesDto = void 0;
 const class_validator_1 = require("class-validator");
 class GetRepliesDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], GetRepliesDto.prototype, "comment_id", void 0);
 exports.GetRepliesDto = GetRepliesDto;
@@ -21,7 +23,8 @@ exports.GetRepliesDto = GetRepliesDto;
 class CreateLikeDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], CreateLikeDto.prototype, "comment_id", void 0);
 exports.CreateLikeDto = CreateLikeDto;
@@ -29,7 +32,8 @@ exports.CreateLikeDto = CreateLikeDto;
 class CreateReplyParamDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], CreateReplyParamDto.prototype, "comment_id", void 0);
 exports.CreateReplyParamDto = CreateReplyParamDto;
@@ -37,7 +41,8 @@ exports.CreateReplyParamDto = CreateReplyParamDto;
 class CreateReplyBodyDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
 ], CreateReplyBodyDto.prototype, "reply_content", void 0);
 exports.CreateReplyBodyDto = CreateReplyBodyDto;
@@ -45,7 +50,8 @@ exports.CreateReplyBodyDto = CreateReplyBodyDto;
 class RemoveReplyDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], RemoveReplyDto.prototype, "reply_id", void 0);
 exports.RemoveReplyDto = RemoveReplyDto;
@@ -53,7 +59,8 @@ exports.RemoveReplyDto = RemoveReplyDto;
 class RemoveLikeDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], RemoveLikeDto.prototype, "comment_id", void 0);
 exports.RemoveLikeDto = RemoveLikeDto;
@@ -61,7 +68,8 @@ exports.RemoveLikeDto = RemoveLikeDto;
 class GetCommentsByForumDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], GetCommentsByForumDto.prototype, "forum_id", void 0);
 exports.GetCommentsByForumDto = GetCommentsByForumDto;
@@ -69,7 +77,8 @@ exports.GetCommentsByForumDto = GetCommentsByForumDto;
 class QueryPageDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", Number)
 ], QueryPageDto.prototype, "page", void 0);
 exports.QueryPageDto = QueryPageDto;
@@ -77,7 +86,8 @@ exports.QueryPageDto = QueryPageDto;
 class CreateReplyQueryDto {
 }
 __decorate([
-    class_validator_1.IsString(), class_validator_1.IsNotEmpty(),
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
 ], CreateReplyQueryDto.prototype, "forum", void 0);
 exports.CreateReplyQueryDto = CreateReplyQueryDto;

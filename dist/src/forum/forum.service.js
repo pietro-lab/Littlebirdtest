@@ -12,6 +12,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForumService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const forum_entity_1 = require("./entity/forum.entity");
@@ -19,14 +20,12 @@ const typeorm_2 = require("typeorm");
 const comment_entity_1 = require("../comment/entity/comment.entity");
 const theme_forum_entity_1 = require("./entity/theme-forum.entity");
 const like_forum_entity_1 = require("./entity/like-forum.entity");
-const forum_gateway_1 = require("./forum.gateway");
 let ForumService = class ForumService {
-    constructor(forumRepository, commentRepository, themeForumRepository, likeForumRepository, forumGateway) {
+    constructor(forumRepository, commentRepository, themeForumRepository, likeForumRepository) {
         this.forumRepository = forumRepository;
         this.commentRepository = commentRepository;
         this.themeForumRepository = themeForumRepository;
         this.likeForumRepository = likeForumRepository;
-        this.forumGateway = forumGateway;
     }
     async getForumByTheme(response, theme_id, page) {
         const theme = await this.themeForumRepository.createQueryBuilder('theme_forum')
@@ -132,12 +131,6 @@ let ForumService = class ForumService {
             no_like: 0
         })
             .execute();
-        await this.forumGateway.handleNewMessage({
-            forum_id,
-            comment_id: comment.identifiers[0].comment_id,
-            comment_content,
-            user_id
-        });
     }
     ;
     async createLike(forum_id, user_id) {
@@ -217,8 +210,7 @@ ForumService = __decorate([
     __metadata("design:paramtypes", [typeorm_2.Repository,
         typeorm_2.Repository,
         typeorm_2.Repository,
-        typeorm_2.Repository,
-        forum_gateway_1.ForumGateway])
+        typeorm_2.Repository])
 ], ForumService);
 exports.ForumService = ForumService;
 //# sourceMappingURL=forum.service.js.map

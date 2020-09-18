@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Theme = void 0;
 const typeorm_1 = require("typeorm");
 const theme_img_entity_1 = require("./theme-img.entity");
 let Theme = class Theme {

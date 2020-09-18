@@ -4,14 +4,12 @@ import { Comment } from '../comment/entity/comment.entity';
 import { Response } from 'express';
 import { ThemeForum } from './entity/theme-forum.entity';
 import { LikeForum } from './entity/like-forum.entity';
-import { ForumGateway } from "./forum.gateway";
 export declare class ForumService {
     private readonly forumRepository;
     private readonly commentRepository;
     private readonly themeForumRepository;
     private readonly likeForumRepository;
-    private readonly forumGateway;
-    constructor(forumRepository: Repository<Forum>, commentRepository: Repository<Comment>, themeForumRepository: Repository<ThemeForum>, likeForumRepository: Repository<LikeForum>, forumGateway: ForumGateway);
+    constructor(forumRepository: Repository<Forum>, commentRepository: Repository<Comment>, themeForumRepository: Repository<ThemeForum>, likeForumRepository: Repository<LikeForum>);
     getForumByTheme(response: Response, theme_id: number, page: number): Promise<Response | void>;
     getForumByLike(page: number): Promise<Forum[]>;
     getForumByUserLike(user_id: number, page: number): Promise<LikeForum[]>;

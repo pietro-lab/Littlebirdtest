@@ -12,19 +12,18 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
 const reply_entity_1 = require("./entity/reply.entity");
 const typeorm_2 = require("@nestjs/typeorm");
 const comment_entity_1 = require("./entity/comment.entity");
 const forum_entity_1 = require("../forum/entity/forum.entity");
-const comment_gateway_1 = require("./comment.gateway");
 let CommentService = class CommentService {
-    constructor(commentRepository, replyRepository, forumRepository, commentGateway) {
+    constructor(commentRepository, replyRepository, forumRepository) {
         this.commentRepository = commentRepository;
         this.replyRepository = replyRepository;
         this.forumRepository = forumRepository;
-        this.commentGateway = commentGateway;
     }
     ;
     async getReplies(response, comment_id, page) {
@@ -101,13 +100,6 @@ let CommentService = class CommentService {
             user_id,
             reply_content
         }).execute();
-        this.commentGateway.handleNewMessage({
-            comment_id,
-            reply_id: reply.identifiers[0].reply_id,
-            reply_content,
-            user_id,
-            forum
-        });
     }
     ;
     async removeReply(response, reply_id) {
@@ -154,8 +146,7 @@ CommentService = __decorate([
     __param(2, typeorm_2.InjectRepository(forum_entity_1.Forum)),
     __metadata("design:paramtypes", [typeorm_1.Repository,
         typeorm_1.Repository,
-        typeorm_1.Repository,
-        comment_gateway_1.CommentGateway])
+        typeorm_1.Repository])
 ], CommentService);
 exports.CommentService = CommentService;
 //# sourceMappingURL=comment.service.js.map

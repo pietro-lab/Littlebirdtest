@@ -12,6 +12,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportController = void 0;
 const common_1 = require("@nestjs/common");
 const report_service_1 = require("./report.service");
 const report_dto_1 = require("./report.dto");

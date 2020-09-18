@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryFailedExceptionFilter = void 0;
 const typeorm_1 = require("typeorm");
 const common_1 = require("@nestjs/common");
 let QueryFailedExceptionFilter = class QueryFailedExceptionFilter {
